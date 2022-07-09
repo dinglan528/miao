@@ -6,6 +6,12 @@
   <title>JS Bin</title>
   <style>
     /* 只能在这里写css，不能改变页面的HTML结构 */
+    /* text-show :
+                  必需。水平阴影的位置允许负值
+                  必需 垂直阴影的位置 允许负值
+                  可选 模糊的距离
+                  可选 阴影的颜色 
+                  可多组*/
     h1 {
         color: black;
       text-shadow: /*字体阴影*/
@@ -19,6 +25,8 @@
     h1 span{
         color: blue;
     }
+
+    /* 空心字体 */
     h3{
         font-size: 50px;
         color: white;
@@ -31,37 +39,49 @@
     p.b{
         font-size: 36px;
     }
+
+    /* 文本框 输入的英文都是大写*/
     p.b input{
         font-size: 36px;
         /* 把所有的文字显示出大写 */
         text-transform: uppercase;
     }
+
+    /* 所有字母变成大写 每个单词的首字母变成大写 变换字型 */
     h2{
         font-family: "comic sans ms",'comin sans','宋体','simsun',serif;
         font-size: 24px;
+        text-transform: uppercase;
         text-transform: capitalize;
-        font-variant: small-caps;
+       
     }
+
+    /* 文本右对齐 斜体字体italic oblique是正体的文字基础上变幻出来的一个斜体字 */
     p.a{
         font-size: 32px;
         font-style: italic;
         text-align:right ;
 
     }
-    p.a b{
 
+    /* 字颜色 文本装饰 下划线（实线） */
+    p.a b{
         color: magenta;
         text-decoration: underline;
         text-decoration-style: solid;
         text-decoration-color:red ;
 
     }
+
+    /* 下划线 删除线并用 空格隔开 */
     p.a > span {
         /*
         1.a 里面有两个span 所以要用>
         2.有两个 属性时 用空格分开 不能用逗号*/
         text-decoration: underline line-through;
     }
+
+    /* 文本两端对齐 */
     p.d {
         font-size: 16px;
         text-indent: 2em;
