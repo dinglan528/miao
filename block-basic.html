@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 20px;
+        }
+        header{
+            background-color: red;  
+              /*用min-width设置 若窗口比600px小 也会取最小值600px 
+              不会让内容溢出  */
+            min-width: 600px;
+        }
+        header p{
+            width: 600px;
+            margin: auto;
+        }
+        main{
+            padding:0 10px;
+            max-width: 600px;
+            box-sizing: border-box;
+            border: 3px blue solid;
+            margin: auto;
+            margin-top: 20px;
+            }
+        main p{
+            height: 4em;
+            overflow: auto;
+        }
+        article{
+            border: 1px red;
+            width: auto;
+            height: 30px;
+            background-color: aqua;
+            margin: 10px;
+        }
+        article:hover{
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+        /* 三角形图形 */
+        footer{
+            margin-top: 30px;
+            border: 30px solid;
+            width: 0;
+            height: 0;
+            border-color: transparent transparent blue transparent;
+            margin: auto;
+            }
+    
+    </style>
+</head>
+<body>
+    <header>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime quos nostrum dicta doloremque, natus nobis dignissimos. Magni, omnis unde harum asperiores nisi reprehenderit ab assumenda rerum fugiat illum dicta sit.</p>
+    </header>
+    <main>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam voluptatibus qui voluptates repudiandae ex laborum necessitatibus aut aspernatur omnis dolore sequi sint magni quo vel facere aperiam, tempora cum numquam.</p>
+        <article></article>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas iusto fuga numquam labore inventore sed ad, voluptate quaerat maxime nihil laborum, expedita obcaecati minus voluptatibus rerum quod sunt dolorem quam?</p>
+    </main>
+    <footer></footer>
+</body>
+</html>
