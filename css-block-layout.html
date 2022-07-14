@@ -26,14 +26,14 @@
         margin-top: 10px;
        }
 
-       ul{
+       .a ul{
         list-style: none;
         padding: 0;
         width: 600px;
         margin: auto;
         margin-top: 10px;
        }
-       ul li{
+       .a ul li{
         box-sizing: border-box;
         width: 148px;
         height: 40px;
@@ -41,16 +41,16 @@
         margin-bottom: 15px;
         background-color: pink;
        }
-       ul li:nth-child(n+5){
+       .a ul li:nth-child(n+5){
         margin-left: 220px;
        }
-       ul li:nth-child(n+9){
+      .a ul li:nth-child(n+9){
         margin-left: 440px;
        }
-       ul li:nth-child(4n+5){
+       .a ul li:nth-child(4n+5){
         margin-top: -220px;
        }
-       ul li:hover{
+       .a ul li:hover{
         background-color: red;
        }
        ol li{
@@ -67,7 +67,23 @@
         text-align: center;
       }
 
-
+      .b ul{
+        list-style: none;
+        padding: 0;
+        width: 700px;
+        margin: auto;
+        margin-left:110px ;
+        margin-top: 10px;
+      }
+      .b ul li{
+        display: inline-block;/*将块元素转化为行内元素，使它的兄弟元素在同一行中从左往右依次排序，不会单独占一行的元素*/
+        width: 142px;
+        height: 34px;
+        border: 3px solid;
+        margin-bottom: 15px;
+        margin-right:70px ;
+        background-color: pink;
+      }
 
 
     </style>
@@ -82,7 +98,37 @@
         <p>页面主体 宽度600px页面主体 宽度600px页面主体 宽度600px页面主体 
             宽度600px页面主体 宽度600px页面主体 宽度600px页面主体 宽度600px页面主体
              宽度600px页面主体 宽度600px页面主体 宽度600px页面主体 宽度600px页面主体
-              宽度600px</p>
+             宽度600px</p>
+        <div class="a">
+            <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+            <li>11</li>
+            <li>12</li>
+            </ul>
+        </div>
+        <ol>
+            <li>link</li>
+            <li>link</li>
+            <li>link</li>
+            <li>link</li>
+            <li>link</li>
+        </ol>
+    </main>
+    <footer>
+        <p>©版权所有<br>本页所有布局均使用块元素</p>
+    </footer>
+    
+
+    <section class="b">
         <ul>
             <li>1</li>
             <li>2</li>
@@ -97,18 +143,7 @@
             <li>11</li>
             <li>12</li>
         </ul>
-        <ol>
-            <li>link</li>
-            <li>link</li>
-            <li>link</li>
-            <li>link</li>
-            <li>link</li>
-        </ol>
-    </main>
-    <footer>
-        <p>©版权所有<br>本页所有布局均使用块元素</p>
-    </footer>
-    
+    </section>
     
    
 
