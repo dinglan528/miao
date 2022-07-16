@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav{
+            width: 100%;
+            height: 50px;
+            background-color: antiquewhite;
+        }
+        .nav ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .nav > ul > li{
+            float: left;
+            width: 200px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            border-left: solid 1px #fff;
+            border-right: solid 1px #fff;
+        }
+        .nav > ul > li > ul{
+           display: none;
+           background-color: cornflowerblue;
+       }
+
+       .nav > ul > li > ul > li{
+        position: relative;
+       }
+       .nav ul ul ul{/*三级菜单*/
+        position: absolute;
+        width: 200px;
+        right: -200px;
+        background-color: pink;
+        display: none;
+        top:0;
+       }
+        
+        .nav li:hover{/* : 没有空格*/
+            background-color: magenta;
+        }
+        .nav > ul > li:hover > ul{/* : 没有空格*/
+            display: block;/*显示出来 */ 
+        }
+
+        .nav>ul>li>ul>li:hover>ul{
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+       <ul>
+        <li>
+            <span>一级标题</span>
+            <ul>
+                <li>
+                    <span>二级标题</span>
+                    <ul>
+                        <li>三级标题</li>
+                        <li>三级标题</li>
+                        <li>三级标题</li>
+                    </ul>
+                </li>
+                <li>
+                    <span>二级标题</span>
+                    <ul>
+                        <li>三级标题</li>
+                        <li>三级标题</li>
+                        <li>三级标题</li>
+                    </ul>
+                </li>
+                <li>
+                    <span>二级标题</span>
+                    <ul>
+                        <li>三级标题</li>
+                        <li>三级标题</li>
+                        <li>三级标题</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <span>一级标题</span>
+            <ul>
+                <li>二级标题</li>
+                <li>二级标题</li>
+                <li>
+                    <span>二级标题</span>
+                    <ul>
+                        <li>三级标题</li>
+                        <li>三级标题</li>
+                        <li>三级标题</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <span>一级标题</span>
+            <ul>
+                <li>二级标题</li>
+                <li>二级标题</li>
+                <li>二级标题</li>
+            </ul>
+        </li>
+
+        <li>
+            <span>一级标题</span>
+            <ul>
+                <li>二级标题</li>
+                <li>二级标题</li>
+                <li>二级标题</li>
+            </ul>
+        </li>
+
+
+        </ul>
+    </div>    
+
+</body>
+</html>
