@@ -6,167 +6,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .nav{
-            width: 100%;
-            height: 50px;
-            background-color: antiquewhite;
-        }
-        .nav ul{
+        html,body,div{
             margin: 0;
             padding: 0;
-            list-style: none;
+            font-size: 0px;
         }
-        .nav > ul > li{
-            float: left;
-            width: 200px;
-            height: 50px;
-            text-align: center;
-            line-height: 50px;
-            border-left: solid 1px #fff;
-            border-right: solid 1px #fff;
-        }
-        .nav > ul > li > ul{
-           display: none;
-           background-color: cornflowerblue;
-       }
-
-       .nav > ul > li > ul > li{
-        position: relative;
-       }
-       .nav ul ul ul{/*三级菜单*/
-        position: absolute;
-        width: 200px;
-        right: -200px;
-        background-color: pink;
-        display: none;
-        top:0;
-       }
         
-        .nav li:hover{/* : 没有空格*/
-            background-color: magenta;
+        ul{
+            list-style: none;
+            /* 列表前面的标点消除 */
+            margin: 0;
+            padding: 0;
         }
-        .nav > ul > li:hover > ul{/* : 没有空格*/
-            display: block;/*显示出来 */ 
+        .menu li{
+            /* 一级菜单 */
+            border: 1px solid;
+            font-size: 16px;
+            width: 100px;
+            height: 30px;
+            background-color: antiquewhite;
+            line-height: 30px;
+            /* 行高等于盒子高度可以让文字居中 */
+            text-align: center;
+        }
+        .menu > li{
+            display: inline-block;
+            /* 让块变成行内块 使一级菜单横向排列 */
+        }
+        .menu li{
+            position: relative;
+            /* 以父级作为位置对象 */
+        }
+        .menu ul{
+            /* 固定二级菜单的位置 */
+            position: absolute;
+            left: 0;
+            top: 100%;
+            display: none;
+             /* 需要隐藏的区域被隐藏 */
         }
 
-        .nav>ul>li>ul>li:hover>ul{
+        /* 固定三级菜单的位置 选中更深层的ul */
+       .menu ul ul{
+            left: 100%;
+            top: 0;
+       }
+       .menu li:hover > ul{
+        /* menu里的所有li 的儿子 ul hover */
             display: block;
-        }
-
+            /* 因为前面的display：none把它隐藏了 所以再用
+                disp：block;把它显现出来
+            */
+       }
     </style>
 </head>
 <body>
-    <div class="nav">
-       <ul>
-        <li>
-            <span>一级标题</span>
+    <ul class="menu">
+        <li>主食
             <ul>
-                <li>
-                    <span>二级标题</span>
+                <li>面
                     <ul>
-                        <li>三级标题</li>
-                        <li>三级标题</li>
-                        <li>三级标题</li>
+                        <li>拉面</li>
+                        <li>刀削面</li>
                     </ul>
                 </li>
-                <li>
-                    <span>二级标题</span>
+                <li>盖饭
                     <ul>
-                        <li>三级标题</li>
-                        <li>三级标题</li>
-                        <li>三级标题</li>
-                    </ul>
-                </li>
-                <li>
-                    <span>二级标题</span>
-                    <ul>
-                        <li>三级标题</li>
-                        <li>三级标题</li>
-                        <li>三级标题</li>
+                        <li>青椒肉丝</li>
+                        <li>鱼香肉丝</li>
+                        <li>茄子盖饭</li>
                     </ul>
                 </li>
             </ul>
         </li>
-
-        <li>
-            <span>一级标题</span>
+        <li>小吃
             <ul>
-                <li>
-                    <span>二级标题</span>
+                <li>日式
                     <ul>
-                        <li>三级标题</li>
-                        <li>三级标题</li>
-                        <li>三级标题</li>
+                        <li>寿司</li>
+                        <li>章鱼小丸子</li>
+                        <li>照烧</li>
                     </ul>
                 </li>
-                <li>
-                    <span>二级标题</span>
+                <li>中式
                     <ul>
-                        <li>三级标题</li>
-                        <li>三级标题</li>
-                        <li>三级标题</li>
-                    </ul>
-                </li>
-                <li>
-                    <span>二级标题</span>
-                    <ul>
-                        <li>三级标题</li>
-                        <li>三级标题</li>
-                        <li>三级标题</li>
+                        <li>烤冷面</li>
+                        <li>烧饼</li>
+                        <li>臭豆腐</li>
+                        <li>麻辣烫</li>
                     </ul>
                 </li>
             </ul>
         </li>
-
-        <li>
-            <span>一级标题</span>
+        <li>烧烤
             <ul>
-                <li>
-                    <span>二级标题</span>
+                <li>串串
                     <ul>
-                        <li>三级标题</li>
-                        <li>三级标题</li>
-                        <li>三级标题</li>
+                        <li>玉米</li>
+                        <li>韭菜</li>
+                        <li>热狗</li>
+                        <li>豆干</li>
+                        <li>包菜</li>
                     </ul>
                 </li>
-                <li>二级标题</li>
-                <li>
-                    <span>二级标题</span>
+                <li>烤架
                     <ul>
-                        <li>三级标题</li>
-                        <li>三级标题</li>
-                        <li>三级标题</li>
+                        <li>烤鸡</li>
+                        <li>烤鸭</li>
+                        <li>烤鱼</li>
                     </ul>
                 </li>
             </ul>
         </li>
-
-        <li>
-            <span>一级标题</span>
-            <ul>
-                <li>
-                    <span>二级标题</span>
-                    <ul>
-                        <li>三级标题</li>
-                        <li>三级标题</li>
-                        <li>三级标题</li>
-                    </ul>
-                </li>
-                <li>
-                    <span>二级标题</span>
-                    <ul>
-                        <li>三级标题</li>
-                        <li>三级标题</li>
-                        <li>三级标题</li>
-                    </ul>
-                </li>
-                <li>二级标题</li>
-            </ul>
-        </li>
-
-
-        </ul>
-    </div>    
-
+    </ul>
 </body>
 </html>
