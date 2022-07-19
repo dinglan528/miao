@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        
+        .heart {
+            background-image: url(photo/heart.png);
+            /* url里需填相对路径 */
+            width: 100px;
+            height: 100px;
+            background-repeat: no-repeat;
+            /* 默认是平铺 则图片显示不是第一个图片开始 所以要设置不平铺 */
+            background-position: 0px;
+        }
+        .heart:hover{
+            /*transition 缓动函数 改变效果的对象从哪开始 几秒内完成 间隔效果（走多少步）*/
+            transition: background-position 5s steps(28) ;/*此图片有28个分图片*/
+            background-position: -2800px;
+            /* 正值往右走 负值往左走 */
+        }
+
+
+        .love{
+        
+            display: inline-block;
+            width: 200px;
+            height: 300px;
+            border: 1px solid #000;
+            background-color: aqua;
+        }
+        .love:hover{
+            transition: all ease-in 3s ;
+            width: 300px;
+            height: 400px;
+            background-color: pink;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="heart"></div>
+    </section>
+
+    <main>
+        <span class="love"></span>
+    </main>
+</body>
+
+</html>
