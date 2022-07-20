@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+    <style>
+        * {
+            background-color: rgba(0, 0, 0, 0.08);
+            box-shadow: inset 0 0 1px red;
+        }
+        .imgs{
+            width: 600px;
+            height: 500px;
+            position: relative;
+            overflow: hidden;
+        }
+        .imgs img{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 100%;
+            display: inline-block;
+            transition: 1s;
+        }
+        section {
+            position: relative;
+        }
+        section input{
+            display: none;
+            
+        }
+        .indicators{
+            position: absolute;
+            border: 2px solid red;
+            bottom: 10px;
+            left: 10px;
+            z-index: 8;
+             /* 不加则图片不显示 */
+            /* z-index 属性设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。
+                注释：元素可拥有负的 z-index 属性值。
+                注释：Z-index 仅能在定位元素上奏效（例如 position:absolute;）！ 
+                Z-index 可用于将在一个元素放置于另一元素之后。*/
+           font-size: 0;
+        }
+        .indicators label{
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 3px;
+            background-color: lightcoral;
+            cursor: pointer;
+            /* cursor : 网页浏览时用户鼠标指针的样式或图形形状。
+                属性值：
+                default：默认光标（通常是一个箭头）
+                auto：默认，浏览器设置的光标
+                crosshair：光标为十字线
+                pointer：光标为一只手
+                move：光标为某对象可移动
+                text：光标指示文本
+                wait：光标指示程序正在忙（通常是一只表或者一个沙漏）
+            */
+        }
+
+        .indicators label:hover {
+            background-color: pink;
+        }
+
+        /* 选择input第一个孩子 对应div里图片的第一个孩子
+            ~ 表示选中它后面的同级标签
+            +表示选择紧跟其后的第一个元素 
+        */
+        input:nth-child(1):checked~.imgs img:nth-child(1),
+        input:nth-child(2):checked~.imgs img:nth-child(2),
+        input:nth-child(3):checked~.imgs img:nth-child(3),
+        input:nth-child(4):checked~.imgs img:nth-child(4) {
+            left: 0;
+        }
+
+        input:nth-child(1):checked~.indicators label:nth-child(1),
+        input:nth-child(2):checked~.indicators label:nth-child(2),
+        input:nth-child(3):checked~.indicators label:nth-child(3),
+        input:nth-child(4):checked~.indicators label:nth-child(4) {
+            background-color: powderblue;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <!--radio 单选按钮  要给input每个name属性设置同一个名字 否则当点击按钮轮播时 已点击过的效果不会消失-->
+        <input type="radio" id="ra-1" name="radio1">
+        <input type="radio" id="ra-2" name="radio1">
+        <input type="radio" id="ra-3" name="radio1">
+        <input type="radio" id="ra-4" name="radio1">
+
+        <div class="indicators">
+            <label for="ra-1"></label>
+            <label for="ra-2"></label>
+            <label for="ra-3"></label>
+            <label for="ra-4"></label>
+        </div>
+
+        <div class="imgs">
+            <img src="https://ts1.cn.mm.bing.net/th/id/R-C.1e9fac229c2724a0d46a7bf26d0f2f8b?rik=i29l88RJP3TqKQ&riu=http%3a%2f%2fimg95.699pic.com%2fphoto%2f50063%2f5420.jpg_wh860.jpg&ehk=moZ9L2qZTAf9PqlR7BzjnJ3OX4x0o8sT7BYRRVrkGOM%3d&risl=&pid=ImgRaw&r=0"
+                alt="">
+            <img src="https://uploadfile.huiyi8.com/2014/0412/20140412110333486.jpg" alt="">
+            <img src="https://uploadfile.huiyi8.com/2014/0322/20140322022947260.jpg" alt="">
+            <img src="https://uploadfile.huiyi8.com/2013/0810/20130810082550410.jpg" alt="">
+        </div>
+    </section>
+
+
+</body>
+
+</html>
