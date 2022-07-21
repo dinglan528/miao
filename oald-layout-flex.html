@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 如果body的margin不设为0px 则两边会有留白 因为外层还有HTML*/
+        body{
+            margin: 0px;
+        }
+       header{
+        background-color: black;
+        min-width: 600px;
+       }
+       header p{
+        width: 600px;
+        margin: auto;
+        color: white;
+       }
+
+       main p{
+        width: 600px;
+        margin: auto;
+        margin-top: 10px;
+       }
+
+       .a ul{
+        list-style: none;
+        padding: 0;
+        width: 600px;
+        margin: auto;
+        margin-top: 10px;
+       }
+       .a ul li{
+        box-sizing: border-box;
+        width: 148px;
+        height: 40px;
+        border: 3px solid;
+        margin-bottom: 15px;
+        background-color: pink;
+       }
+       .a ul li:nth-child(n+5){
+        margin-left: 220px;
+       }
+      .a ul li:nth-child(n+9){
+        margin-left: 440px;
+       }
+       .a ul li:nth-child(4n+5){
+        margin-top: -220px;
+       }
+       .a ul li:hover{
+        background-color: red;
+       }
+       ol li{
+       border: 1px dotted transparent;
+       border-bottom-color: black;
+        width: 600px;
+        margin: auto;
+       }
+       ol li:nth-child(5){
+        border: hidden;
+       }
+      footer{
+        background-color: plum;
+        text-align: center;
+      }
+
+      .b ul{
+        display: flex;
+        justify-content: space-evenly;
+        margin: auto;
+        gap: 20px;
+        flex-wrap: wrap;
+        list-style: none;
+        width: 680px;
+        margin-top: 10px;
+      }
+      .b ul li{
+        border: 3px solid;
+        width: 146px;
+        height: 35px;
+        background-color: pink;
+        margin-right: 30px;
+        
+      }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <p>机还复活不长说您只邯郸保持不饿陈标三大三白醋不包住不机还复活不长说您只邯郸保持不饿陈标三大三白醋不包住不机还复活不长说您只邯郸保持不饿陈标三大三白醋不包住不机还复活不长说您只邯郸保持不饿陈标三大三白醋不包住不机还复活不长说您只邯郸保持不饿陈标三大三白醋不包住不</p>
+        
+    </header>
+
+    <main>
+        <p>页面主体 宽度600px页面主体 宽度600px页面主体 宽度600px页面主体 
+            宽度600px页面主体 宽度600px页面主体 宽度600px页面主体 宽度600px页面主体
+             宽度600px页面主体 宽度600px页面主体 宽度600px页面主体 宽度600px页面主体
+             宽度600px</p>
+        <div class="a">
+            <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+            <li>11</li>
+            <li>12</li>
+            </ul>
+        </div>
+        <ol>
+            <li>link</li>
+            <li>link</li>
+            <li>link</li>
+            <li>link</li>
+            <li>link</li>
+        </ol>
+    </main>
+    <footer>
+        <p>©版权所有<br>本页所有布局均使用块元素</p>
+    </footer>
+    
+
+    <section class="b">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+            <li>11</li>
+            <li>12</li>
+        </ul>
+    </section>
+    
+   
+
+
+</body>
+</html>
