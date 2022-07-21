@@ -1,153 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* 如果body的margin不设为0px 则两边会有留白 因为外层还有HTML*/
-        body{
-            margin: 0px;
+        *{
+            border: 1px solid red;
+            background-color: rgba(0, 0,0, 0.02);
         }
-       header{
-        background-color: black;
-        min-width: 600px;
-       }
-       header p{
-        width: 600px;
-        margin: auto;
-        color: white;
-       }
-
-       main p{
-        width: 600px;
-        margin: auto;
-        margin-top: 10px;
-       }
-
-       .a ul{
-        list-style: none;
-        padding: 0;
-        width: 600px;
-        margin: auto;
-        margin-top: 10px;
-       }
-       .a ul li{
-        box-sizing: border-box;
-        width: 148px;
-        height: 40px;
-        border: 3px solid;
-        margin-bottom: 15px;
-        background-color: pink;
-       }
-       .a ul li:nth-child(n+5){
-        margin-left: 220px;
-       }
-      .a ul li:nth-child(n+9){
-        margin-left: 440px;
-       }
-       .a ul li:nth-child(4n+5){
-        margin-top: -220px;
-       }
-       .a ul li:hover{
-        background-color: red;
-       }
-       ol li{
-       border: 1px dotted transparent;
-       border-bottom-color: black;
-        width: 600px;
-        margin: auto;
-       }
-       ol li:nth-child(5){
-        border: hidden;
-       }
-      footer{
-        background-color: plum;
-        text-align: center;
-      }
-
-      .b ul{
-        display: flex;
-        justify-content: space-evenly;
-        margin: auto;
-        gap: 20px;
-        flex-wrap: wrap;
-        list-style: none;
-        width: 680px;
-        margin-top: 10px;
-      }
-      .b ul li{
-        border: 3px solid;
-        width: 146px;
-        height: 35px;
-        background-color: pink;
-        margin-right: 30px;
-        
-      }
-
+        html,body{
+            padding: 0;
+            margin: 0;
+            height: 100%;
+        }
+        section{
+            height: 100%;
+            display: flex;
+            box-sizing: border-box;
+    
+        }
+        .a{
+            flex-grow: 1;
+            background-image: url(https://ts1.cn.mm.bing.net/th/id/R-C.ef44940ec695af984130ae83bda4438c?rik=WIxlq1v05Lhphg&riu=http%3a%2f%2fpic.bizhi360.com%2fbbpic%2f67%2f9867_7.jpg&ehk=vuWjlYHpLqX7gwmUUXDn%2fGFyTYRJcfdaQkNxtFO98fI%3d&risl=&pid=ImgRaw&r=0);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .b{
+            display: flex;
+            flex-direction: column;
+            flex-grow: 2;
+        }
+        .c{
+            flex-grow: 1;
+            background-image: url(https://ts1.cn.mm.bing.net/th/id/R-C.4545e292b0682d0ff2261e0ec4a76966?rik=SOmlHKQvo2YI4Q&riu=http%3a%2f%2fimage.biaobaiju.com%2fuploads%2f20181111%2f19%2f1541937046-UTJRBtOLez.jpg&ehk=XyhqSDoigXsUuUkEoxk4b9HIVExzdwZi%2fQQPwOEPex0%3d&risl=&pid=ImgRaw&r=0);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .d{
+            flex-grow: 1;
+            background-image: url(https://pic1.zhimg.com/v2-554d58f6ec27a49b59e1c6c81e9600cb_r.jpg?source=1940ef5c);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        header{
+           flex-grow: 1;
+           background-image: url(https://pic3.zhimg.com/v2-5c2578612d6920d0858d6b8617f97ac8_r.jpg);
+           background-size: cover;
+            background-repeat: no-repeat;
+        }
+        main{
+            flex-grow: 4;
+            background-image: url(https://tse3-mm.cn.bing.net/th/id/OIP-C.AVozZauZKTIdGgcVDgWgjQHaH0?pid=ImgDet&w=785&h=829&rs=1);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
 
     </style>
 </head>
+
 <body>
-    <header>
-        <p>机还复活不长说您只邯郸保持不饿陈标三大三白醋不包住不机还复活不长说您只邯郸保持不饿陈标三大三白醋不包住不机还复活不长说您只邯郸保持不饿陈标三大三白醋不包住不机还复活不长说您只邯郸保持不饿陈标三大三白醋不包住不机还复活不长说您只邯郸保持不饿陈标三大三白醋不包住不</p>
-        
-    </header>
-
-    <main>
-        <p>页面主体 宽度600px页面主体 宽度600px页面主体 宽度600px页面主体 
-            宽度600px页面主体 宽度600px页面主体 宽度600px页面主体 宽度600px页面主体
-             宽度600px页面主体 宽度600px页面主体 宽度600px页面主体 宽度600px页面主体
-             宽度600px</p>
-        <div class="a">
-            <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li>10</li>
-            <li>11</li>
-            <li>12</li>
-            </ul>
+    <section>
+        <div class="a"></div>
+        <div class="b">
+            <header></header>
+            <main></main>
         </div>
-        <ol>
-            <li>link</li>
-            <li>link</li>
-            <li>link</li>
-            <li>link</li>
-            <li>link</li>
-        </ol>
-    </main>
-    <footer>
-        <p>©版权所有<br>本页所有布局均使用块元素</p>
-    </footer>
-    
-
-    <section class="b">
-        <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li>10</li>
-            <li>11</li>
-            <li>12</li>
-        </ul>
+        <div class="c"></div>
+        <div class="d"></div>
     </section>
-    
-   
-
-
 </body>
+
 </html>
